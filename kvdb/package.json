@@ -1,0 +1,19 @@
+{
+  "name": "kvdb",
+  "version": "1.0.0",
+  "description": "Key-Value Store using an Unrolled Linked List",
+  "main": "index.ts",
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf dist && rm -rf node_modules"
+  },
+  "types": "./dist/index.d.ts",
+  "keywords": [],
+  "author": "Student",
+  "license": "GPL2.0",
+  "type": "module",
+  "devDependencies": {
+    "@types/node": "^26.2.0",
+    "typescript": "^7.0.2"
+  }
+}
