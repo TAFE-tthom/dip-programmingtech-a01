@@ -109,7 +109,6 @@ export class KVDBSwitchboard {
   	*/
   union(key1: number, key2: number) {
     return KVDBInvalidResult.make("Union");
-    
   }
 
   /** 

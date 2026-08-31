@@ -1,4 +1,3 @@
-import {strict as assert} from 'node:assert/strict';
 import test from "node:test";
 import { InternalQueryResult, KVDBTestUtil } from './util.ts';
 
@@ -6,7 +5,7 @@ import {
   KVDBSwitchboard
 } from 'kvdb';
 
-test("testEmptyKeys1", (t) => {
+test("testEmptyKeys1", () => {
   const switchBoard = new KVDBSwitchboard();
   
   KVDBTestUtil.validateResults(
@@ -20,7 +19,7 @@ test("testEmptyKeys1", (t) => {
         
 });
 
-test("testGetEmptyKeys2", (t) => {
+test("testGetEmptyKeys2", () => {
   
   const switchboard = new KVDBSwitchboard();
   KVDBTestUtil
@@ -44,7 +43,7 @@ test("testGetEmptyKeys2", (t) => {
     .run();
 });
 
-test("testSetEntry1", (t) => {
+test("testSetEntry1", () => {
   
   const switchBoard = new KVDBSwitchboard();
         KVDBTestUtil
@@ -73,7 +72,7 @@ test("testSetEntry1", (t) => {
         );
 });
 
-test("testSetEntrysWithGet1", (t) => {
+test("testSetEntrysWithGet1", () => {
   
   const switchBoard = new KVDBSwitchboard();
   KVDBTestUtil.validateResults(
@@ -109,7 +108,7 @@ test("testSetEntrysWithGet1", (t) => {
   );
 });
 
-test("testSetEntrysWithGet2", (t) => {
+test("testSetEntrysWithGet2", () => {
   
   const switchBoard = new KVDBSwitchboard();
   KVDBTestUtil.validateResults(
@@ -159,7 +158,7 @@ test("testSetEntrysWithGet2", (t) => {
   );
 });
 
-test("testSetEntrysWithGet3", (t) => {
+test("testSetEntrysWithGet3", () => {
   
   const switchBoard = new KVDBSwitchboard();
   KVDBTestUtil
@@ -209,7 +208,7 @@ test("testSetEntrysWithGet3", (t) => {
       .run();
 });
 
-test("testSetEntrysWithRemove1", (t) => {
+test("testSetEntrysWithRemove1", () => {
   
   const switchBoard = new KVDBSwitchboard();
   KVDBTestUtil
@@ -259,7 +258,7 @@ test("testSetEntrysWithRemove1", (t) => {
       .run();
 });
 
-test("testSetEntrysWithRemove2", (t) => {
+test("testSetEntrysWithRemove2", () => {
   
   const switchBoard = new KVDBSwitchboard();
   KVDBTestUtil
