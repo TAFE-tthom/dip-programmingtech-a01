@@ -118,7 +118,17 @@ export class InternalQueryResult implements KVDBQueryResult {
     const self = this;
     const testActions: Array<() => void> = [
       () => { assert.equal(other.command(), self.command(), "Command did not match")},      
-      () => { assert.equal(other.results(), self.results(), "Results did not match")},      
+      () => {
+        if(self.results() === null) {
+          assert(other.results() === null);
+        } else {
+          assert.strictEqual(other.results().length, self.results().length, "Results did not match");
+          const length = self.results().length;
+          for(let i = 0; i < length; i++) {
+            assert.strictEqual(other.results()[i], self.results()[i], "Results did not match");
+          }
+          
+        }},      
       () => { assert.equal(other.recordedKey(), self.recordedKey(), "Key did not match")},      
       () => { assert.equal(other.success(), self.success(), "Success value did not match")},      
     ];
